@@ -1,0 +1,4 @@
+{
+  "StackName": "foo",
+  "OnFailure": "NOTIFY_MAMA"
+}

@@ -1,0 +1,4 @@
+{
+  "StackName": "foo",
+  "OnFailure": "DO_NOTHING"
+}

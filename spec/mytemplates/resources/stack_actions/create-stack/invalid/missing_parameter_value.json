@@ -1,0 +1,8 @@
+{
+  "StackName": "foo",
+  "Parameters": [
+    {
+      "ParameterKey": "some-parameter"
+    }
+  ]
+}

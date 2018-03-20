@@ -1,0 +1,9 @@
+{
+  "StackName": "foo",
+  "Parameters": [
+    {
+      "ParameterKey": "some-key",
+      "UsePreviousValue": true
+    }
+  ]
+}

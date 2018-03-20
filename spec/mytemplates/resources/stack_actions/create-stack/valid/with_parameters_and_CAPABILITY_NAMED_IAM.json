@@ -1,0 +1,10 @@
+{
+  "StackName": "foo",
+  "Parameters": [
+    {
+      "ParameterKey": "some-key",
+      "ParameterValue": "some-value"
+    }
+  ],
+  "Capabilities": ["CAPABILITY_NAMED_IAM"]
+}
