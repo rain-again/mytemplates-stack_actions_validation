@@ -1,0 +1,12 @@
+{
+  "StackName": "foo",
+  "Tags": [
+    {
+      "Key": "some-key",
+      "Value": "some-value"
+    },
+    {
+      "Key": "some-other-key"
+    }
+  ]
+}
