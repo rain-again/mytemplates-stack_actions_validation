@@ -1,0 +1,165 @@
+{
+  "type": "object",
+  "properties": {
+    "StackName": {
+      "type": "string"
+    },
+    "TemplateBody": {
+      "type": "string"
+    },
+    "TemplateURL": {
+      "type": "string"
+    },
+    "Parameters": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/definitions/parameter"
+          }
+        ]
+      }
+    },
+    "DisableRollback": {
+      "type": "boolean"
+    },
+    "RollbackConfiguration": {
+      "type": "object",
+      "properties": {
+        "RollBackTriggers": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/rollback_trigger"
+              }
+            ]
+          }
+        },
+        "MonitoringTimeInMinutes": {
+          "type": "integer"
+        }
+      }
+    },
+    "TimeoutInMinutes": {
+      "type": "integer"
+    },
+    "NotificationARNs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "Capabilities": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string",
+            "enum": [
+              "CAPABILITY_IAM",
+              "CAPABILITY_NAMED_IAM"
+            ]
+          }
+        ]
+      }
+    },
+    "ResourceTypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "RoleARN": {
+      "type": "string"
+    },
+    "OnFailure": {
+      "type": "string",
+      "enum": [
+        "DO_NOTHING",
+        "ROLLBACK",
+        "DELETE"
+      ]
+    },
+    "StackPolicyBody": {
+      "type": "string"
+    },
+    "StackPolicyURL": {
+      "type": "string"
+    },
+    "Tags": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/definitions/tag"
+          }
+        ]
+      }
+    },
+    "ClientRequestToken": {
+      "type": "string"
+    },
+    "EnableTerminationProtection": {
+      "type": "boolean"
+    }
+  },
+  "definitions": {
+    "parameter": {
+      "type": "object",
+      "properties": {
+        "ParameterKey": {
+          "type": "string"
+        },
+        "ParameterValue": {
+          "type": "string"
+        },
+        "UsePreviousValue": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "ParameterKey"
+      ],
+      "minProperties": 2,
+      "maxProperties": 2,
+      "dependencies": {
+        "ParameterValue": [
+          "ParameterKey"
+        ],
+        "UsePreviousValue": [
+          "ParameterKey"
+        ]
+      }
+    },
+    "rollback_trigger": {
+      "type": "object",
+      "properties": {
+        "Arn": {
+          "type": "string"
+        },
+        "Type": {
+          "type": "string"
+        }
+      }
+    },
+    "tag": {
+      "type": "object",
+      "properties": {
+        "Key": {
+          "type": "string"
+        },
+        "Value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Key",
+        "Value"
+      ]
+    }
+  },
+  "required": [
+    "StackName"
+  ]
+}
