@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rain-again/mytemplates-stack_actions_validation.svg?branch=master)](https://travis-ci.org/rain-again/mytemplates-stack_actions_validation)
+
 # Mytemplates::StackActionsValidation
 
 Validate information supplied to operate on stacks in AWS CloudFormation against the supported API
